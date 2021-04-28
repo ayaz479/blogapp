@@ -1,0 +1,20 @@
+{% extends "leyout.html" %}
+
+{% block body %}
+
+{% if article %}
+
+<h4>{{article.title}}</h4>
+<hr>
+<h3>{{article.author}}</h3>
+<hr>
+<h7>{{article.created_data}}</h7>
+<hr>
+<h6>{{article.content|safe}}</h6>
+{% else %}
+<div class="alert alert-warning">
+    There is no such article
+</div>
+
+{% endif %}
+{% endblock body %}
